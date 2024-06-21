@@ -1,9 +1,9 @@
 package org.example.domain;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
 import java.time.LocalDateTime;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class AssertionsTest {
     @Test
@@ -11,17 +11,17 @@ public class AssertionsTest {
         int[] primeiroLancamento = {10, 20, 30, 40, 50};
         int[] segundoLancamento = {10, 20, 30, 40, 50};
 
-        Assertions.assertArrayEquals(primeiroLancamento, segundoLancamento);
+        assertArrayEquals(primeiroLancamento, segundoLancamento);
     }
 
     @Test
     void validarSeObjetoNull() {
         Pessoa pessoa = null;
 
-        Assertions.assertNull(pessoa);
+        assertNull(pessoa);
 
         pessoa = new Pessoa("Leonardo", LocalDateTime.now());
-        Assertions.assertNotNull(pessoa);
+        assertNotNull(pessoa);
     }
 
     @Test
@@ -29,6 +29,6 @@ public class AssertionsTest {
         double valor = 5.0;
         double outroValor = 5.0;
 
-        Assertions.assertEquals(valor, outroValor);
+        assertEquals(valor, outroValor);
     }
 }

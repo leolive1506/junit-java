@@ -2,7 +2,7 @@ package org.example;
 
 import org.junit.jupiter.api.*;
 
-@TestMethodOrder(MethodOrderer.MethodName.class)
+@TestMethodOrder(MethodOrderer.Random.class)
 public class OrdemTest {
     @Test
     void validaFluxoA() {
